@@ -1,0 +1,438 @@
+/* Globel reset */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+}
+
+.is-flex{
+    display: flex;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+html{
+    font-family: 'Nunito', sans-serif;
+}
+
+:root{
+    --Primary-color:#f5f5f5;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+/*-----------X----------------------x-----------*/
+
+/* header style starts */
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--Primary-color)
+}
+
+header .logo{
+    display: flex;
+    padding: 20px 10vw;
+    justify-content: space-between;
+
+}
+
+header .logo .brand-logo{
+    height: 44px;
+    width: 208px;
+}
+
+header .nav-items{
+    display: flex;
+    align-items: center;
+}
+
+header .search{
+    width: 500px;
+    display: flex;
+}
+
+header .search-box{
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #d1d1d1;
+    background: none;
+    outline: none;
+}
+
+search-box::placeholder{
+    color: #a9a9a9;
+    
+}
+
+header .search-btn{
+    width: 20%;
+    height: 40px;
+    padding: 10px 20px;
+    outline: none;
+    cursor: pointer;
+    color: #a9a9a9;
+    background-color: #383838;
+    font-size: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header .links-container{
+    width: 100%;
+    display: flex;
+    padding: 10px 10vw;
+    justify-content: center;
+    list-style: none;
+    border-top: 1px solid #d1d1d1;
+    box-shadow: var(--box-shadow);
+}
+
+header .links{
+    padding: 1 10px;
+    margin: 0 15px;
+    color: #383838;
+    opacity: 0.5;
+    transition: .5s;
+}
+
+header .link:hover{
+    color: #383838;
+}
+
+/* header style Ends */
+
+/*-----------X----------------------x-----------*/
+
+/* main style starts */
+
+.wrapper{
+    width: 100%;
+    position: relative;
+    z-index: -2;
+}
+
+.wrapper .wrapper-img{
+    height: 83vh;
+    background: url(../images/joyful-parisian-woman-beret-sunglasses-points-place-text-purple-wall.jpg);
+    background-size: cover;
+    width: 100%;
+
+}
+
+.wrapper .wrapper-title{
+    position: absolute;
+    top: 27%;
+    right: 9%;
+    animation: slideMe 1s ease-in;
+}
+
+@keyframes slideMe{
+    0%{
+        transform: translateX(500px);
+    }
+}
+
+.wrapper .wrapper-title h3{
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size:40px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.wrapper .wrapper-title h1{
+    font-size: 61px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 700;
+}
+
+.wrapper .wrapper-title p{
+    margin-bottom: 30px;
+    text-align: end;
+    font-size: 15px;
+}
+
+.wrapper .wrapper-title .cta {
+    padding: 13px 32px;
+    background-color: black;
+    color: var(--Primary-color);
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-left: 400px;
+}
+
+.wrapper .icons{
+    position: absolute;
+    top: 27%;
+    left: 15px;
+}
+
+.wrapper .icons i{
+    display: block;
+    font-size: 17px;
+    margin: 30px;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all .5s ease-in-out;
+}
+
+.wrapper .icons i:hover{
+    transform: rotate(360deg);
+}
+
+/* main images style Ends */
+
+/*-----------X----------------------x-----------*/
+
+/* product section style Starts */
+
+main{
+    margin: 50px 150px 0;
+}
+
+main .arrivels{
+    border-bottom: 2px solid #a9a9a9;
+}
+
+main .arrivels-box{
+    width: 232px;
+    height: 50px;
+    background-color: #8872A5;
+    color: white;
+    border-top-right-radius:25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .grid-container{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 30px;
+}
+
+main .grid-container .grids{
+    box-shadow: var(--box-shadow);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin: 25px 0;
+    position: relative;
+}
+
+main .grid-container .grids .off{
+    background-color: red;
+    color: white;
+    font-weight: 400;
+    position: absolute;
+    top: -17px;
+    right: -8px;
+    padding: 12px 6px;
+    border-radius:50%;
+}
+
+main .grid-container .grids img{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom: 30px;
+}
+
+main .grid-container .grids .grid-captions{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+main .grid-container .grids .grid-captions h3{
+    font-weight: 300;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+main .grid-container .grids .grid-icons{
+    margin: 10px 20px 0;
+    font-size: 12px;
+    color: #bea309;
+}
+
+main .grid-container .grids .cart{
+    height: 40px;
+    width: 100%;
+    background-color: teal;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+main .grid-container .grids .cart:hover{
+    background-color: #8872A5;
+}
+
+main .grid-container .grids .cart h3{
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+/* product section style Ends */
+
+/*-----------X----------------------x-----------*/
+
+/* footer section style */
+
+.hero-section{
+    width: 100%;
+    background-color: #bbaecc;
+    height: 50vh;
+    margin-top: 40px;
+}
+
+.hero-section .hero-img{
+    position: relative;
+}
+
+.hero-section .hero-img img{
+    width: 559px;
+    margin-left: 100px; 
+}
+
+.hero-section .round-box{
+    position: absolute;
+    top: 46%;
+    right: 20%;
+}
+
+.hero-section .round-box span{
+    margin: 0 13px;
+    padding: 35px 8px;
+    background-color: white;
+    border-radius: 50%;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight:600;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  footer {
+    background-color:#777;
+    color: #bbb;
+    line-height: 1.5;
+  }
+  footer a {
+    text-decoration: none;
+    color: #eee;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .ft-title {
+    color: #fff;
+    font-family: "Merriweather", serif;
+    font-size: 1.375rem;
+    padding-bottom: 0.625rem;
+  }
+  /* Sticks footer to bottom */
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .container {
+    flex: 1;
+    margin-top: 60px;
+  }
+  /* Footer main */
+  .ft-main {
+    padding: 1.25rem 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  .ft-main-item {
+    padding: 1.25rem;
+    min-width: 12.5rem;
+  }
+  
+  /* Footer main | Newsletter form */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  input[type="email"] {
+    border: 0;
+    padding: 0.625rem;
+    margin-top: 0.3125rem;
+  }
+
+  input[type="submit"] {
+    background-color: #00d188;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    padding: 0.625rem 0.9375rem;
+    margin-top: 0.3125rem;
+  }
+
+  /* Footer social */
+  .ft-social {
+    padding: 0 1.875rem 1.25rem;
+  }
+
+  .ft-social-list {
+    display: flex;
+    justify-content: center;
+    border-top: 1px #777 solid;
+    padding-top: 1.25rem;
+  }
+
+  .ft-social-list li {
+    margin: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  /* Footer legal */
+  .ft-legal {
+    padding: 0.9375rem 1.875rem;
+    background-color: #333;
+  }
+
+  .ft-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .ft-legal-list li {
+    margin: 0.125rem 0.625rem;
+    white-space: nowrap;
+  }
+
+  .ft-legal-list li:nth-last-child(2) {
+      flex: 1;
+  }
